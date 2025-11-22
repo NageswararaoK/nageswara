@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header> 
         <!-- Traditional Telugu Wedding Invocation -->
          <img src="Ganesha.png" alt="Passport Photo" class="passport-photo">
          <p style="text-align:center; font-size:1.1em; font-weight:bold; color:#8b4000;">
@@ -20,7 +20,15 @@
 </section>
         <h1>Nageswara Rao Karaka</h1>
         <h2>PhD | R&D Senior Power Electronics Engineer | Bangkok</h2>
-        
+        <!-- Social icons aligned top-right -->
+        <div class="header-icons">
+            <a href="https://aratt.ai/user/@nageswara_k" target="_blank" title="Arattai">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Arattai_logo.png" alt="Arattai" class="icon-btn">
+            </a>
+            <a href="https://wa.me/qr/ZWH6FNPGD2XGE1" target="_blank" title="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon-btn">
+            </a>
+        </div>
     </header>
 
     <nav>
@@ -36,14 +44,19 @@
 
     <section id="About Me">
         <h3>About Me</h3>
-        <p>Hello! Welcome to my matrimonial profile. I am calm, patient, and highly ambitious in my professional career. I value family, love Vedic traditions and yoga, and enjoys spending time in nature. I believe in a balanced and healthy lifestyle, and is known for being friendly and adaptable to different environments.</p>
+        <p>
+            Hello and welcome to my matrimonial profile. I would like to share a little about myself.  
+            I am calm, patient, and ambitious in my professional journey, while deeply valuing family and traditions.  
+            I have a strong interest in Vedic practices, yoga, and spending time in nature, which help me maintain balance in life.  
+            Friends and colleagues know me as someone who is simple, adaptable, and committed to living a healthy and harmonious lifestyle.
+        </p>
         <ul>
             <li><b>DOB:</b> 32 years (Born 1993)</li>
             <li><b>Nakshatra:</b> Hasta, 3rd pada</li>
             <li><b>Rasi:</b> Kanya</li>
             <li><b>Height:</b> 5 ft 6 inch</li>
             <li><b>Education:</b> PhD – Power Electronics at IIT Bombay, MTech – Electrical Engineering at NIT Rourkela (<a href="http://nageswararaok.github.io/" target="_blank">Website</a>)</li>
-            <li><b>Job (Present):</b> R&D Senior Power Electronics Engineer, Delta Electronics (Thailand) PCL, Bangkok</li>
+            <li><b>Job (Present):</b> R&D Senior Power Electronics Engineer, Delta Electronics (Thailand) PCL, Samut Prakan (nearest is Suvarnabhoomi airport, Bangkok).</li>
             <li><b>Gotra:</b> Paidipala</li>
             <li><b>Caste:</b> Koppula Velama</li>
             <li><b>Complexion:</b> White</li>
@@ -82,11 +95,11 @@
             <img src="Traditional1.jpg" alt="Traditional Photo 1" class="traditional-photo">
             <img src="Traditional2.jpg" alt="Traditional Photo 2" class="traditional-photo">
             <img src="Traditional3.jpg" alt="Traditional Photo 3" class="traditional-photo">
-            <img src="Traditional4.jpg" alt="Traditional Photo 4" class="traditional-photo">
+            <img src="Traditional5.jpg" alt="Traditional Photo 4" class="traditional-photo">
         </div>
     </section>
 
-    <section id=" Partner Preferences">
+    <section id="Partner Preferences">
         <h3>Partner Preferences</h3>
         <p>We are looking for an emotionally mature and adaptable partner who values family, culture, and mutual respect. She should be kind-hearted, honor traditions, treat elders with care, and lead a balanced and harmonious life.</p>
         <!--We are looking for an emotionally mature and adaptable partner who values family, culture, and mutual respect. She should cherish traditions, respect elders, and lead a balanced and harmonious life.-->
@@ -99,7 +112,7 @@
             <li>Marital Status: Never Married</li>
             <li>Mother Tongue: Telugu</li>
             <li>Religion: Hindu, Caste: Velama, Dosham: No Dosham</li>
-            <li>Education: Preferably Bachelor's/Master's (Engineering), or Any</li>
+            <li>Education: Preferably Bachelors/Masters (Engineering), or Any</li>
             <li>Occupation: Any</li>
         </ul>
     </section>
@@ -109,14 +122,50 @@
         <p>For inquiries, please contact via phone or email:</p>
         <p>Phone: Will be provided personally<br>
         Email: mbnraok[AT]gmail.com</p>
-        Please prefer a WhatsApp call, as I am in Bangkok currently.
+        Preferably via WhatsApp as I am in Thailand currently.
     </section>
 
     <footer>
-        <div>&copy; 2025 Nageswara Rao Karaka</div>
+     <div class="footer-container">
+        <!-- Left side: Copyright -->
+        <div class="footer-left">
+            <p>&copy; 2025 Nageswara Rao Karaka | All Rights Reserved</p>
+        </div>
+     </div>
     </footer>
+    
+    
+    <!-- <a href="mailto:mbnraok@gmail.com" target="_blank" title="Email">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail"
+            class="footer-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/nageswara-rao-karaka-b96941a2/" target="_blank" title="LinkedIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"
+            class="footer-icon">
+    </a>
+     -->
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const photos = document.querySelectorAll(".traditional-photo");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+            } else {
+                entry.target.classList.remove("in-view");
+            }
+        });
+    }, { threshold: 0.5 }); // triggers when 50% of image is visible
+
+    photos.forEach(photo => {
+        observer.observe(photo);
+    });
+});
+</script>
+
 
 </body>
 
 </html>
-
